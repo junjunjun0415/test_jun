@@ -63,6 +63,9 @@
   #down-btn {
     background: linear-gradient(135deg, #80cbc4, #80deea);
   }
+  #plus5-btn {
+    background: linear-gradient(135deg, #ffb74d, #ffa726);
+  }
   #reset-btn {
     background: linear-gradient(135deg, #f48fb1, #ef9a9a);
   }
@@ -74,6 +77,7 @@
   <div class="buttons">
     <button id="btn">カウントアップ</button>
     <button id="down-btn">カウントダウン</button>
+    <button id="plus5-btn">+5</button>
     <button id="reset-btn">リセット</button>
   </div>
 </div>
@@ -103,6 +107,11 @@
       display.textContent = --count;
       updateBackground();
     }
+  });
+  document.getElementById('plus5-btn').addEventListener('click', () => {
+    count += 5;
+    display.textContent = count;
+    updateBackground();
   });
   document.getElementById('reset-btn').addEventListener('click', () => {
     count = 0;
